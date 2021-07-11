@@ -620,18 +620,16 @@ Humanoid.Died:connect(function()
 end)
 
 local SKILL1FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.13, 0, 0.80, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 1 Frame")
-local SKILL2FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.60, 0, 0.80, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 2 Frame")
-local SKILL3FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.23, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 3 Frame")
-local SKILL4FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.50, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 4 Frame")
-local SKILL5FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.7, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 5 Frame")
-local SKILL6FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.1, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 6 Frame")
+local SKILL3FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.23, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 2 Frame")
+local SKILL4FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.50, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 3 Frame")
+local SKILL5FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.7, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 4 Frame")
+local SKILL6FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.1, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 5 Frame")
 
 local SKILL1TEXT = CreateLabel(SKILL1FRAME, "[Z] Warp", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 1")
-local SKILL2TEXT = CreateLabel(SKILL2FRAME, "[B] Rival Smash", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 2")
-local SKILL3TEXT = CreateLabel(SKILL3FRAME, "[C] Chunk chuck", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 3")
-local SKILL4TEXT = CreateLabel(SKILL4FRAME, "[V] Boost", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 4")
-local SKILL5TEXT = CreateLabel(SKILL5FRAME, "[X] X-Event", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 5")
-local SKILL6TEXT = CreateLabel(SKILL6FRAME, "Power level: ["..POWERLEVEL.."]", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 6")
+local SKILL2TEXT = CreateLabel(SKILL3FRAME, "[C] Chunk chuck", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 3")
+local SKILL3TEXT = CreateLabel(SKILL4FRAME, "[V] Boost", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 4")
+local SKILL4TEXT = CreateLabel(SKILL5FRAME, "[X] X-Event", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 5")
+local SKILL5TEXT = CreateLabel(SKILL6FRAME, "Power level: ["..POWERLEVEL.."]", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 6")
 
 --//=================================\\
 --||	ATTACK FUNCTIONS AND STUFF
@@ -712,164 +710,6 @@ function Warp()
 	end
 	ATTACK = false
 	Rooted = false
-end
-
-function RivalingOverthrower()
-	if HITFLOOR ~= nil then
-		if Mouse.Target.Parent ~= Character and Mouse.Target.Parent.Parent ~= Character and Mouse.Target.Parent:FindFirstChildOfClass("Humanoid") ~= nil then
-			local HITBODY = Mouse.Target.Parent
-			local TORS = HITBODY:FindFirstChild("Torso") or HITBODY:FindFirstChild("UpperTorso")
-			local HUMAN = Mouse.Target.Parent:FindFirstChildOfClass("Humanoid")
-			if TORS ~= nil and HUMAN ~= nil then
-				ATTACK = true
-				Rooted = true
-				TORS.Anchored = true
-				RootPart.CFrame = TORS.CFrame * CF(0,0,4)
-				HITFLOOR, HITPOS = Raycast(TORS.Position, (CF(TORS.Position, TORS.Position + VT(0, -1, 0))).lookVector, 4 * TORS.Size.Y/2, HITBODY)
-				local FLOOR = HITFLOOR
-				local POS = HITPOS
-				print(FLOOR)
-				UNANCHOR = false
-				RootPart.Anchored = true
-				CreateSound("1295446488", Torso, 10, 1)
-				for i=0, 1, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0 + 0.05 * COS(SINE / 12)) * ANGLES(RAD(0), RAD(0), RAD(0)), 2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(0)), 2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-				end
-				local TAUNTS = {"907329532","907333294","907329893"}
-				CreateSound(TAUNTS[MRANDOM(1,#TAUNTS)], Torso, 10, 1)
-				for i=0, 1, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0 + 0.05 * COS(SINE / 12)) * ANGLES(RAD(0), RAD(0), RAD(-45)), 2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(45)), 2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(90), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-				end
-				RootPart.CFrame = TORS.CFrame * CF(0,0,2)
-				CreateSound("260411131", TORS, 10, 1)
-				TORS.Anchored = false
-				local WELD = CreateWeldOrSnapOrMotor("Weld", TORS, RightArm, TORS, CF(0,-1,-0.5) * ANGLES(RAD(-90), RAD(0), RAD(0)), CF(0, 0, 0))
-				for i=0, 1, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0 + 0.05 * COS(SINE / 12)) * ANGLES(RAD(0), RAD(0), RAD(45)), 2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(-45)), 2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(150), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(0)), 2 / Animation_Speed)
-				end
-				for i=0, 2, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0, ROOTC0 * CF(0, 0, -1.2) * ANGLES(RAD(65), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(-40), RAD(0), RAD(20)) * RIGHTSHOULDERC0, 0.2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(-40), RAD(0), RAD(-20)) * LEFTSHOULDERC0, 0.2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -0.3, -1) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(-20)), 0.2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -0.3, -1) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(20)), 0.2 / Animation_Speed)
-				end
-				for i = 1, 15 do
-					CreateRing(VT(0,0,0),false,0,25,CF(TORS.Position+VT(0,-3,0))*ANGLES(RAD(90),RAD(0),RAD(0)),"Institutional white",VT(i/5,i/5,0))
-				end
-				WELD:remove()
-				local grav = Instance.new("BodyPosition",TORS)
-				grav.P = 20000
-				grav.D = 100
-				grav.maxForce = Vector3.new(math.huge,math.huge,math.huge)
-				grav.position = TORS.Position + VT(0,50,0)
-				grav.Name = "GravityForce"
-				for i=0, 1, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0, 0, 0 + 0.05 * COS(SINE / 12)) * ANGLES(RAD(-25), RAD(0), RAD(45)), 2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0 + ((1) - 1)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(-45)), 2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(150), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(-25)), 2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1 - 0.05 * COS(SINE / 12), -0.01) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(-8), RAD(0), RAD(25)), 2 / Animation_Speed)
-				end
-				for i=0, 2, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0, ROOTC0 * CF(0, 0, -1.2) * ANGLES(RAD(65), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(-40), RAD(0), RAD(20)) * RIGHTSHOULDERC0, 0.2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(-40), RAD(0), RAD(-20)) * LEFTSHOULDERC0, 0.2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -0.3, -1) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(-20)), 0.2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -0.3, -1) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(20)), 0.2 / Animation_Speed)
-				end
-				CreateSound("1295446488", Torso, 10, 1)
-				CreateWave(VT(0,0,0),15,CF(HITPOS),true,2,"Really red",VT(1,0.1,1))
-				RootPart.CFrame = CF(TORS.Position)*CF(0,0,5)
-				for i=0, 2, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0, ROOTC0 * CF(0, 0, 0 ) * ANGLES(RAD(0), RAD(0), RAD(0)), 2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0 , 0 + ((1) - 1)) * ANGLES(RAD(20), RAD(0), RAD(0)), 2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(60)) * RIGHTSHOULDERC0, 2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-60)) * LEFTSHOULDERC0, 2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1, 0) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(20)), 2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, 0) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(10)), 2 / Animation_Speed)
-				end
-				VanishPlayer()
-				for i = 1, 50+(25*POWERLEVEL) do
-					Swait()
-					CreateRing(VT(0,0,0),false,0,25,TORS.CFrame*ANGLES(RAD(MRANDOM(-180,180)),RAD(MRANDOM(-180,180)),RAD(MRANDOM(-180,180))),"Institutional white",VT(POWERLEVEL/3,POWERLEVEL/3,0))
-					CreateSound(HITWEAPONSOUNDS[MRANDOM(1,#HITWEAPONSOUNDS)], TORS, 10, 1)
-					local CFRAME = CF(TORS.Position)*ANGLES(RAD(MRANDOM(-180,180)),RAD(MRANDOM(-180,180)),RAD(MRANDOM(-180,180)))
-					MagicSphere(VT(0,0,0),15,CFRAME,"Really red",VT(0.1,0.1,POWERLEVEL*5))
-					MagicSphere(VT(0.1,0.1,0.1),15,CFRAME,"Really red",VT(0.1,0.1,POWERLEVEL*5))
-				end
-				RootPart.CFrame = CF(TORS.Position)*CF(0,15,1)
-				Reappear()
-				for i=0, 2, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0, ROOTC0 * CF(0, 0, -1.2) * ANGLES(RAD(-5), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, -0.5) * ANGLES(RAD(160), RAD(0), RAD(-20)) * RIGHTSHOULDERC0, 0.2 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, -0.5) * ANGLES(RAD(160), RAD(0), RAD(20)) * LEFTSHOULDERC0, 0.2 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1, 0) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, 0) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.2 / Animation_Speed)
-				end
-				for i = 1, 15 do
-					CreateRing(VT(0,0,0),false,0,25,CF(TORS.Position+VT(0,3,0))*ANGLES(RAD(90),RAD(0),RAD(0)),"Institutional white",VT(i/5,i/5,0))
-				end
-				RootPart.CFrame = CF(TORS.Position)*CF(0,5,1)
-				grav.Position = POS
-				CreateDebreeRing(FLOOR,POS,6*POWERLEVEL,VT(6,6,6)*POWERLEVEL,10)
-				CreateFlyingDebree(FLOOR,CF(POS),25,VT(4,4,4)*POWERLEVEL,10,50*POWERLEVEL)
-				CreateSound("289842971", TORS, 3, 1)
-				MagicSphere(VT(0,0,0),35,CF(POS),"Really red",VT(POWERLEVEL/2,POWERLEVEL/2,POWERLEVEL/2))
-				MagicSphere(VT(0.1,0.1,0.1),35,CF(POS),"Really red",VT(POWERLEVEL/2,POWERLEVEL/2,POWERLEVEL/2))
-				killnearest(POS,POWERLEVEL*10,5)
-				if POWERLEVEL > 3 then
-					MagicSphere(VT(0.1,500,0.1),15,CF(POS),"Institutional white",VT(POWERLEVEL,0,POWERLEVEL))
-				end
-				CreateWave(VT(0,0,0),15,CF(POS),true,2,"Really black",VT(POWERLEVEL*2,0.1,POWERLEVEL*2))
-				for i=0, 1, 0.1 / Animation_Speed do
-					Swait()
-					RootJoint.C0 = Clerp(RootJoint.C0, ROOTC0 * CF(0, 0, -1.2) * ANGLES(RAD(45), RAD(0), RAD(0)), 3 / Animation_Speed)
-					Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 3 / Animation_Speed)
-					RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1, 0.5, -1) * ANGLES(RAD(25), RAD(0), RAD(-20)) * RIGHTSHOULDERC0, 3 / Animation_Speed)
-					LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1, 0.5, -1) * ANGLES(RAD(25), RAD(0), RAD(20)) * LEFTSHOULDERC0, 3 / Animation_Speed)
-					RightHip.C0 = Clerp(RightHip.C0, CF(1, -1, 0) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 3 / Animation_Speed)
-					LeftHip.C0 = Clerp(LeftHip.C0, CF(-1, -1, 0) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 3 / Animation_Speed)
-				end
-				HITBODY:BreakJoints()
-				grav:remove()
-				ATTACK = false
-				Rooted = false
-				UNANCHOR = true
-				RootPart.Anchored = false
-				if POWERLEVEL > 1 then
-					POWERLEVEL = POWERLEVEL - 1
-				end
-			end
-		end
-	end
 end
 
 function ChunkChuck()
@@ -1732,10 +1572,6 @@ function KeyDown(Key)
 	
 		if Key == "z" and ATTACK == false then
 			Warp()
-		end
-	
-		if Key == "b" and ATTACK == false then
-			RivalingOverthrower()
 		end
 	
 		if Key == "c" and ATTACK == false then
