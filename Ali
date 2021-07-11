@@ -620,39 +620,16 @@ Humanoid.Died:connect(function()
 end)
 
 local SKILL1FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.13, 0, 0.80, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 1 Frame")
-local SKILL3FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.23, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 2 Frame")
-local SKILL4FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.50, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 3 Frame")
-local SKILL5FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.7, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 4 Frame")
-local SKILL6FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.1, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 5 Frame")
+local SKILL2FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.23, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 2 Frame")
+local SKILL3FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.50, 0, 0.93, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 3 Frame")
+local SKILL4FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.7, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 4 Frame")
+local SKILL5FRAME = CreateFrame(WEAPONGUI, 0.5, 2, UD2(0.365, 0, 0.1, 0), UD2(0.26, 0, 0.07, 0), C3(0,0,0), C3(0, 0, 0), "Skill 5 Frame")
 
 local SKILL1TEXT = CreateLabel(SKILL1FRAME, "[Z] Warp", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 1")
 local SKILL2TEXT = CreateLabel(SKILL3FRAME, "[C] Chunk chuck", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 3")
 local SKILL3TEXT = CreateLabel(SKILL4FRAME, "[V] Boost", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 4")
 local SKILL4TEXT = CreateLabel(SKILL5FRAME, "[X] X-Event", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 5")
 local SKILL5TEXT = CreateLabel(SKILL6FRAME, "Power level: ["..POWERLEVEL.."]", SKILLTEXTCOLOR, 7, "Garamond", 0, 2, 1, "Text 6")
-
---//=================================\\
---||			DAMAGING
---\\=================================//
-
-function killnearest(position,range,maxstrength)
-	for i,v in ipairs(workspace:GetChildren()) do
-	if v.ClassName == "Model" then
-		local body = v:GetChildren()
-			for part = 1, #body do
-				if((body[part].ClassName == "Part" or body[part].ClassName == "MeshPart") and v ~= Character) then
-					if(body[part].Position - position).Magnitude < range then
-						if v.ClassName == "Model" then
-							v:BreakJoints()
-						end
-						--table.insert(Effects2,{body[part],"Disappear",0.02,2,2,2,2})
-						body[part].Velocity = CFrame.new(position,body[part].Position).lookVector*5*maxstrength
-					end
-				end
-			end
-		end
-	end
-end
 
 --//=================================\\
 --||	ATTACK FUNCTIONS AND STUFF
