@@ -1,0 +1,764 @@
+-------------------------------
+--[[ The Coffe Rage Script ]]--
+-------------------------------
+--[[
+	Created by LegendOfDarknees.
+	and also leaked by LegendOfDarknees.
+	
+	Note:
+		I decided to leak it cause this
+		pathetic skid "pxire" leeched it out
+		of my friend. If you see "pxire",
+		never trade him or let your friends
+		be friends with him.
+		Anyway, pxire claims that he made this.
+		Too bad I leaked it first
+	
+	Anyway, so you script kiddies enjoy this.
+	By the way, this script is old, so I don't really care about it.
+	
+	
+	Do not remove this credit.
+--]]
+local p=game:service("Players").LocalPlayer
+
+ScreenGui0 = Instance.new("ScreenGui")
+Frame1 = Instance.new("Frame")
+TextLabel2 = Instance.new("TextLabel")
+Frame3 = Instance.new("Frame")
+Frame4 = Instance.new("Frame")
+Frame5 = Instance.new("Frame")
+Frame6 = Instance.new("Frame")
+TextLabel7 = Instance.new("TextLabel")
+ScreenGui0.Name = "sc"
+ScreenGui0.Parent = p.PlayerGui
+Frame1.Name = "bk"
+Frame1.Parent = ScreenGui0
+Frame1.Size = UDim2.new(0, 308, 0, 308)
+Frame1.Position = UDim2.new(0.274853796, 0, -1, 0)
+Frame1.BackgroundColor3 = Color3.new(0.00392157, 1, 0.584314)
+Frame1.BorderSizePixel = 0
+TextLabel2.Name = "txt"
+TextLabel2.Parent = Frame1
+TextLabel2.Transparency = 1
+TextLabel2.Size = UDim2.new(0, 308, 0, 308) 
+TextLabel2.Text = "L"
+TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.BorderSizePixel = 0
+TextLabel2.Font = Enum.Font.SourceSansLight
+TextLabel2.FontSize = Enum.FontSize.Size14
+TextLabel2.TextColor3 = BrickColor.new("Institutional white").Color
+TextLabel2.TextScaled = true
+TextLabel2.TextStrokeTransparency = 0.89999997615814
+TextLabel2.TextWrapped = true
+TextLabel2.TextTransparency=0
+Frame3.Name = "b2"
+Frame3.Parent = Frame1
+Frame3.Size = UDim2.new(0, 308, 0, 68)
+Frame3.Position = UDim2.new(0, 0, 0.77922076, 0)
+Frame3.BackgroundColor3 = Color3.new(0, 1, 0.701961)
+Frame3.BorderSizePixel = 0
+Frame4.Name = "b3"
+Frame4.Parent = Frame1
+Frame4.Size = UDim2.new(0, 308, 0, 51)
+Frame4.Position = UDim2.new(0, 0, 0.834415555, 0)
+Frame4.BackgroundColor3 = Color3.new(0, 1, 0.886275)
+Frame4.BorderSizePixel = 0
+Frame5.Name = "b4"
+Frame5.Parent = Frame1
+Frame5.Size = UDim2.new(0, 308, 0, 19)
+Frame5.Position = UDim2.new(0, 0, 0.938311696, 0)
+Frame5.BackgroundColor3 = Color3.new(0, 0.768628, 1)
+Frame5.BorderSizePixel = 0
+Frame6.Name = "bk2"
+Frame6.Parent = Frame1
+Frame6.Size = UDim2.new(0, 308, 0, 40)
+Frame6.Position = UDim2.new(0, 0, 0, 0)
+Frame6.BackgroundColor3 = Color3.new(0, 0.65098, 1)
+Frame6.BorderSizePixel = 0
+TextLabel7.Name = "txt"
+TextLabel7.Parent = Frame6
+TextLabel7.Transparency = 1
+TextLabel7.Size = UDim2.new(1, 0, 1, 0)
+TextLabel7.Text = "Created by the programmer LegendOfDarknees."
+TextLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel7.BackgroundTransparency = 1
+TextLabel7.BorderSizePixel = 0
+TextLabel7.Font = Enum.Font.SourceSansBold
+TextLabel7.FontSize = Enum.FontSize.Size14
+TextLabel7.TextColor3 = BrickColor.new("Institutional white").Color
+TextLabel7.TextScaled = true
+TextLabel7.TextTransparency=0
+TextLabel7.TextStrokeTransparency = 0.89999997615814
+
+TextLabel7.TextWrapped = true
+
+local sc = ScreenGui0
+sc.bk.ZIndex=2
+sc.bk.b2.ZIndex=2
+sc.bk.b3.ZIndex=2
+sc.bk.b4.ZIndex=2
+sc.bk.txt.ZIndex=2
+
+sc.bk.Position = UDim2.new(0.274853796, 0, -1, 0)
+sc.bk:TweenPosition(UDim2.new(0.275, 0,0.1, 0),"Out","Sine",2)
+sc.bk.bk2:TweenPosition(UDim2.new(0,0,1,0),"Out","Sine",2)
+wait(3)
+sc.bk:TweenPosition(UDim2.new(0.275, 0,1.7, 0),"Out","Sine",2)
+wait(2)
+sc:Destroy()
+
+wait(0.1)
+-------------------------------
+local p=game:service("Players").LocalPlayer
+if  p.Name=="Reruderu" then
+        p:Kick("go away, skid who uses crappy decompilers,v3rmie skid.")
+elseif p.Name=="Rerumu" then
+        p:Kick("no thanks, skid who uses crappy decompilers that they didnt make.also being an pathetic v3rmie kid")
+end
+local char=p.Character
+script.Parent=char 
+local torso=char.Torso
+local hed=char.Head
+local larm=char:FindFirstChild("Left Arm")
+local rarm=char:FindFirstChild("Right Arm")
+local lleg=char:FindFirstChild("Left Leg")
+local rleg=char:FindFirstChild("Right Leg") 
+local hum=char.Humanoid
+local cam=workspace.CurrentCamera
+local root=char.HumanoidRootPart
+local mouse=p:GetMouse()
+local hb=game:service("RunService").Heartbeat
+local rs=game:service("RunService").Stepped
+hum.MaxHealth=150000
+hum.Health=hum.MaxHealth
+local pgui=Instance.new("ScreenGui",p.PlayerGui)
+random={25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,-25,-26,-27,-28,-29,-30,-31,-32,-33,-34,-35,-36,-37,-38,-39,-40,-41,-42,-43,-44,-45,-46,-47,-48,-49,-50,-51,-52,-53,-54,-55,-56,-57,-58,-59,-60,-61,-62,-63,-64,-65,-66,-67,-68,-69,-70,-71,-72,-73,-74,-75,-76,-77,-78,-79,-80,-81,-82,-83,-84,-85,-86,-87,-88,-89,-90,-91,-92,-93,-94,-95,-96,-97,-98,-99,-100}
+local run = 30
+local normal = 16
+local color = "Really black"
+-------------------
+local drinks="10722059"
+local m="41707332"
+local tx="41708701"
+local ragesong="655337888"
+local breaks="368270172"
+local scream="527276541"
+-------------------
+
+function fnt(pos,dist,splr)
+    if splr then return(splr.Torso.CFrame.p -pos).magnitude < dist end
+        local list = {}
+        for i,v in pairs(workspace:GetChildren())do
+            if v:IsA("Model")then
+                if v:findFirstChild("Torso")then
+                    if v ~= char then
+                        if(v.Torso.Position -pos).magnitude <= dist then
+                            table.insert(list,v)
+                        end
+                    end
+                end
+            end
+        end
+    return list
+end
+function fnp(pos,dist,splr)
+    if splr then return(splr.Torso.CFrame.p -pos).magnitude < dist end
+        local list = {}
+        for i,v in pairs(workspace:GetChildren())do
+            if v:IsA("Part")then
+                    if v ~= char and v.Name~="Car" and v~=torso and v.Name~="Base" and v.Name~="Baseplate" then
+                        if(v.Position -pos).magnitude <= dist then
+                            table.insert(list,v)
+                        end
+                end
+            end
+        end
+    return list
+end
+fw = function(wp0, wp1, wc0x, wc0y, wc0z) -- fast weld
+local wld = Instance.new("Weld", wp1)
+wld.Part0 = wp0
+wld.Part1 = wp1
+wld.C0 = CFrame.new(wc0x, wc0y, wc0z)
+end
+local trans=false
+------------------------------------
+local msgs=0
+function say(msg,speed,tme)
+msgs=msgs+1
+local bg=Instance.new("BillboardGui",char)
+bg.Enabled=true;
+bg.Active=true
+bg.Adornee=hed
+bg.Size=UDim2.new(1,0,1,0)
+bg.StudsOffset=Vector3.new(0,3+msgs,0)
+local txt=Instance.new("TextLabel",bg)
+txt.Position=UDim2.new(0,0,0,0)
+txt.Size=UDim2.new(8,0,1.3,0)
+txt.BackgroundTransparency=1
+txt.BorderSizePixel=0
+txt.Font="Bodoni"
+txt.TextScaled=true;
+txt.TextWrapped=true;
+txt.TextColor3=Color3.new(255,255,255)
+txt.TextStrokeTransparency=0
+txt.TextStrokeColor3=Color3.new(0,0,0)
+txt.Text=""
+if trans == true then
+txt.TextColor3=Color3.new(255,0,0)
+txt.Font="Antique"
+end
+coroutine.wrap(function()
+for i = 1,string.len(msg) do
+        print(i)
+        if speed>0 then
+        wait(speed)
+        else
+        wait()
+        end
+        txt.Text=txt.Text..msg:sub(i,i)
+end
+wait(tme)
+txt:Destroy()
+bg:Destroy()
+msgs=msgs-1
+end)()
+
+end
+local s0=Instance.new("Sound",char)
+s0.SoundId="rbxassetid://"..ragesong
+s0.Volume=1999
+s0.Pitch=1
+s0.Looped=true
+
+local hair = Instance.new("Part",char)
+hair.Material="Neon"
+hair.CanCollide=false
+hair.Size=Vector3.new(0.1,0.1,0.1)
+hair.BrickColor=BrickColor.new(color)
+hair.Transparency=1
+
+local msh = Instance.new("SpecialMesh",hair)
+msh.MeshId="rbxassetid://560196103"
+msh.Scale=Vector3.new(6.5,6.5,6.5)
+
+local w = Instance.new("Weld",hair)
+w.Part1=hair
+w.Part0=hed
+w.C0=CFrame.new(0,-0.1,0.6)
+
+----------chat
+p.Chatted:connect(function(m)
+say(string.sub(m, 1, string.len(m)),0,3)
+end)
+------------------------------------
+anim="idle"
+local sine=0
+local add=0
+local value=0
+local ffing=false
+local msgs=0
+attack=false
+NoAnims=false
+----preparing character----
+fw(torso, larm, -1.5, 0.5, 0)
+larm.Weld.C1 = CFrame.new(0, 0.5, 0)
+fw(torso, rarm, 1.5, 0.5, 0)
+rarm.Weld.C1 = CFrame.new(0, 0.5, 0)
+fw(torso, hed, 0, 1.5, 0)
+fw(torso, lleg, -0.5, -1, 0)
+lleg.Weld.C1 = CFrame.new(0, 1, 0)
+fw(torso, rleg, 0.5, -1, 0)
+rleg.Weld.C1 = CFrame.new(0, 1, 0)
+fw(root, torso, 0, -1, 0)
+torso.Weld.C1 = CFrame.new(0, -1, 0)
+--------------rot------------
+local r=0
+local radd=0.04
+coroutine.wrap(function()
+while rs:wait() do
+r=r+radd
+end
+end)()
+attack = false
+-----------------------------
+local e = Instance.new("Part",char)
+e.Name="Mug"
+e.CanCollide=false
+e.Size=Vector3.new(1,1,1)
+
+local me=Instance.new("SpecialMesh",e)
+me.MeshId="rbxassetid://"..m
+me.TextureId="rbxassetid://"..tx
+me.Scale=Vector3.new(1.6,1.6,1.6)
+
+local w=Instance.new("Weld",e)
+w.Part1=e
+w.Part0=larm
+w.C0=CFrame.new(0,-1.35,0)*CFrame.Angles(math.rad(180),0,0)
+
+-----------------------------
+mouse.KeyDown:connect(function(key)
+	if key == "f" and attack == false then
+		if trans == false then
+			attack = true
+			NoAnims = true
+			
+			for i = 1, 30 do
+				torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+				rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+				lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+				rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(0),0,0),0.1)
+				larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,-0.5)*CFrame.Angles(math.rad(0),0,0),0.25)
+				hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+				hb:wait()
+			end
+			
+			NoAnims=false
+			attack=false
+		end
+	end
+end)
+
+mouse.KeyDown:connect(function(key)
+        if key == "e" and attack == false then
+                if trans == false then
+                        attack=true
+                        NoAnims=true
+                        hum.WalkSpeed=0
+                        
+                        local fx = Instance.new("Sound",char)
+                        fx.SoundId="rbxassetid://"..drinks
+                        fx.Volume=10
+                        fx.Pitch=1
+                        fx:Play()
+                        
+                        for i = 1, 30 do
+                                torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+                                rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0.15),0.25)
+                                lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,-0.15),0.25)
+                                rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(0)+-math.sin(sine/14)/7,0,-6+-math.sin(sine/14)/7),0.1)
+                                larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,-0.5)*CFrame.Angles(math.rad(140),0,-5.4),0.25)
+                                hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+                                rs:wait()
+                        end
+                        
+                        wait(3)
+                        
+                        w:Destroy()
+                        e.CanCollide=true
+                        
+                        fx.SoundId="rbxassetid://"..breaks
+                        fx:Play()
+                        
+                        e.Touched:connect(function()
+                                local cf=e.CFrame
+                                e:Destroy()
+                                for i = 1, 10 do
+                                        local g = Instance.new("WedgePart",char)
+                                        g.Name="spike"
+                                        g.CFrame=cf
+                                        g.BrickColor=BrickColor.new("Bright blue")
+                                        g.Reflectance=0.3
+                                        g.Transparency=0.4
+                                        g.Size=Vector3.new(0.1,0.1,0.1)
+                                        wait()
+                                end
+                        end)
+                        
+                        for i = 1, 30 do
+                                torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+                                rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0.15),0.25)
+                                lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,-0.15),0.25)
+                                rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(0)+-math.sin(sine/14)/7,0,-6+-math.sin(sine/14)/7),0.1)
+                                larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,-0.5)*CFrame.Angles(math.rad(140),0,-5.4),0.25)
+                                hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,-0.4)*CFrame.Angles(math.rad(-40),0,0),0.25)
+                                rs:wait()
+                        end
+                        
+                        print("drinked")
+                        
+                        local fx2 = Instance.new("Sound",char)
+                        fx2.SoundId="rbxassetid://"..scream
+                        fx2.Volume=1000
+                        fx2.Pitch=1
+                        fx2:Play()
+                        
+                        coroutine.wrap(function()
+                                while trans == false do
+                                        wait(0.2)
+                                        local ef = Instance.new("Part",char)
+                                        ef.Name="pulse"
+                                        ef.BrickColor=BrickColor.new(color)
+                                        ef.Material="Neon"
+                                        ef.Shape="Ball"
+                                        ef.CanCollide=false
+                                        ef.Anchored=true
+                                        ef.Size=Vector3.new(1,1,1)
+                                        ef.CFrame=torso.CFrame
+                                        
+                                        local ef2 = ef:Clone()
+                                        ef2.Parent=ef
+                                        ef2.BrickColor=BrickColor.new(color)
+                                        ef2.Name="call"
+                                        ef2.Size=Vector3.new(1,1,1)
+                                        local em=Instance.new("SpecialMesh",ef2)
+                                        em.MeshId="rbxassetid://3270017"
+                                        em.Scale=Vector3.new(1,1,0.0001)
+                                        
+                                        local ef3 = ef2:Clone()
+                                        ef3.Parent=ef
+                                        ef3.Name="aura"
+                                        ef3.CFrame=root.CFrame
+                                        local em2=ef3.Mesh
+                                        em2.MeshId="rbxassetid://20329976"
+                                        em2.Scale=Vector3.new(1,0.4,1)
+                                        
+                                        local ef4 = ef3:Clone()
+                                        ef4.Parent=ef
+                                        local em3=ef4.Mesh
+                                        
+                                        local ef5 = ef2:Clone()
+                                        ef5.Parent=ef
+                                        local em4=ef5.Mesh
+                                        
+                                        coroutine.wrap(function()
+                                                for i = 1, 60 do
+                                                        rs:wait()
+                                                        ef.Size=ef.Size+Vector3.new(1,1,1)
+                                                        ef.Transparency=ef.Transparency+1/60
+                                                        ef2.Size=ef2.Size+Vector3.new(1,0.3,1)
+                                                        ef2.Transparency=ef2.Transparency+1/60
+                                                        em.Scale=em.Scale+Vector3.new(1,1,0)
+                                                        ef2.CFrame=torso.CFrame*CFrame.Angles(r,r,r)
+                                                        ef3.Size=ef3.Size+Vector3.new(1,0.3,1)
+                                                        ef3.Transparency=ef3.Transparency+1/60
+                                                        ef3.CFrame=root.CFrame*CFrame.Angles(0,r,0)
+                                                        em2.Scale=em2.Scale+Vector3.new(1,0.3,1)
+                                                        ef4.Size=ef4.Size+Vector3.new(1,0.3,1)
+                                                        ef4.Transparency=ef4.Transparency+1/60
+                                                        ef4.CFrame=root.CFrame*CFrame.Angles(0,-r,0)
+                                                        em3.Scale=em3.Scale+Vector3.new(1,0.3,1)
+                                                        ef5.Transparency=ef5.Transparency+1/60
+                                                        em4.Scale=em4.Scale+Vector3.new(1,1,0)
+                                                        ef5.CFrame=torso.CFrame*CFrame.Angles(-r,-r,-r)
+                                                end
+                                                ef:Destroy()
+                                                ef2:Destroy()
+                                                ef3:Destroy()
+                                                ef4:Destroy()
+                                                ef5:Destroy()
+                                        end)()
+                                end
+                                        local ef = Instance.new("Part",char)
+                                        ef.Name="pulse"
+                                        ef.BrickColor=BrickColor.new(color)
+                                        ef.Material="Neon"
+                                        ef.Shape="Ball"
+                                        ef.CanCollide=false
+                                        ef.Anchored=true
+                                        ef.Size=Vector3.new(1,1,1)
+                                        ef.CFrame=root.CFrame
+                                        local em=Instance.new("SpecialMesh",ef)
+                                        em.MeshId="rbxassetid://9982590"
+                                        em.Scale=Vector3.new(1,0.3,1)
+                                        
+                                        local ef2 = ef:Clone()
+                                        ef2.Parent=ef
+                                        ef2.Name="aura"
+                                        ef2.CFrame=root.CFrame
+                                        ef2.Mesh:Destroy()
+                                        
+                                        local ef3 = ef:Clone()
+                                        ef3.Parent=ef
+                                        ef3.Name="aura"
+                                        ef3.CFrame=root.CFrame
+                                        ef3.Mesh:Destroy()
+                                        local em2=Instance.new("SpecialMesh",ef3)
+                                        em2.MeshId="rbxassetid://20329976"
+                                        em2.Scale=Vector3.new(1,0.3,1)
+                                        
+                                        coroutine.wrap(function()
+                                                for i = 1, 160 do
+                                                        ef.Size=ef.Size+Vector3.new(2,2,2)
+                                                        ef.Transparency=ef.Transparency+1/160
+                                                        em.Scale=em.Scale+Vector3.new(0.6,0.6,0.6)
+                                                        ef.CFrame=root.CFrame*CFrame.Angles(r,r,r)
+                                                        ef3.Transparency=ef3.Transparency+1/160
+                                                        ef3.CFrame=root.CFrame*CFrame.Angles(0,r,0)
+                                                        em2.Scale=em2.Scale+Vector3.new(2,0.8,2)
+                                                        ef2.Size=ef2.Size+Vector3.new(2,2,2)
+                                                        ef2.Transparency=ef2.Transparency+1/160
+                                                        rs:wait()
+                                                end
+                                                ef:Destroy()
+                                                ef2:Destroy()
+                                                ef3:Destroy()
+                                        end)()
+                        end)()
+                        
+                        for i = 1, 30 do
+                                torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,4,0)*CFrame.Angles(math.rad(20),0,0),0.25)
+                                rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0.2)*CFrame.Angles(math.rad(-40),0,0.15),0.25)
+                                lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0.2)*CFrame.Angles(math.rad(-40),0,-0.15),0.25)
+                                rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5,0.2)*CFrame.Angles(math.rad(-40),0,-6),0.25)
+                                larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,0.2)*CFrame.Angles(math.rad(-40),0,6),0.25)
+                                hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+                                rs:wait()
+                        end
+                        wait(8.7)
+                        s0:Play()
+                        trans=true
+                        print("screamed")
+						hair.Transparency=0
+						for i,v in pairs(char:GetChildren()) do
+							if v:FindFirstChild("Handle") then
+								v.Handle.Transparency=1
+							end
+						end
+                        hum.WalkSpeed=normal
+                        NoAnims=false
+                        attack=false
+                end
+        end
+end)
+------effects------
+coroutine.wrap(function()
+        while wait(0.05) do
+                if trans == true then
+                        local ef = Instance.new("Part",char)
+                        ef.Name="effect"
+                        ef.CanCollide=false
+                        ef.Anchored=true
+                        ef.CFrame=root.CFrame*CFrame.new(0,-2.5,0)*CFrame.Angles(0,r,0)
+                        ef.Size=Vector3.new(1,1,1)
+                        ef.BrickColor=BrickColor.new(color)
+                        ef.Material="Neon"
+                        
+                        local em = Instance.new("SpecialMesh",ef)
+                        em.MeshId="rbxassetid://20329976"
+                        em.Scale=Vector3.new(1,0.2,1)
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef.Size=ef.Size:lerp(ef.Size+Vector3.new(0.035,0.035,0.035),0.25)
+                                em.Scale=em.Scale:lerp(em.Scale+Vector3.new(1,0.3,1),0.25)
+                                ef.Transparency=ef.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef:Destroy()
+                        end)()
+                end
+        end
+end)()
+coroutine.wrap(function()
+        while wait(0.05) do
+                if trans == true then
+                        local ef = Instance.new("Part",char)
+                        ef.Name="effect"
+                        ef.CanCollide=false
+                        ef.Anchored=true
+                        ef.CFrame=torso.CFrame*CFrame.new(0,0,0)*CFrame.Angles(r,r,r)
+                        ef.Size=Vector3.new(1,1,1)
+                        ef.BrickColor=BrickColor.new(color)
+                        ef.Material="Neon"
+                        
+                        local em = Instance.new("SpecialMesh",ef)
+                        em.MeshId="rbxassetid://3270017"
+                        em.Scale=Vector3.new(1,1,0.00000001)
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef.Size=ef.Size:lerp(ef.Size+Vector3.new(0.035,0.035,0),0.25)
+                                em.Scale=em.Scale:lerp(em.Scale+Vector3.new(1.2,1.2,0),0.25)
+                                ef.Transparency=ef.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef:Destroy()
+                        end)()
+                end
+        end
+end)()
+coroutine.wrap(function()
+        while wait(0.1) do
+                if trans == true then
+                        local ef = Instance.new("Part",char)
+                        ef.Name="effect"
+                        ef.CanCollide=false
+                        ef.Anchored=true
+                        ef.CFrame=lleg.CFrame*CFrame.new(0,-1.05,0)*CFrame.Angles(r,r,r)
+                        ef.Size=Vector3.new(1,1,1)
+                        ef.BrickColor=BrickColor.new(color)
+                        ef.Material="Neon"
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef.Size=ef.Size:lerp(ef.Size+Vector3.new(0.035,0.035,0.035),0.25)
+                                ef.Transparency=ef.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef:Destroy()
+                        end)()
+                        local ef2 = Instance.new("Part",char)
+                        ef2.Name="effect"
+                        ef2.CanCollide=false
+                        ef2.Anchored=true
+                        ef2.CFrame=rleg.CFrame*CFrame.new(0,-1.05,0)*CFrame.Angles(r,r,r)
+                        ef2.Size=Vector3.new(1,1,1)
+                        ef2.BrickColor=BrickColor.new(color)
+                        ef2.Material="Neon"
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef2.Size=ef2.Size:lerp(ef2.Size+Vector3.new(0.035,0.035,0.035),0.25)
+                                ef2.Transparency=ef2.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef2:Destroy()
+                        end)()
+                end
+        end
+end)()
+coroutine.wrap(function()
+        while wait(0.1) do
+                if trans == true then
+                        local ef = Instance.new("Part",char)
+                        ef.Name="effect"
+                        ef.CanCollide=false
+                        ef.Anchored=true
+                        ef.CFrame=larm.CFrame*CFrame.new(0,-1.05,0)*CFrame.Angles(r,r,r)
+                        ef.Size=Vector3.new(1,1,1)
+                        ef.BrickColor=BrickColor.new(color)
+                        ef.Material="Neon"
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef.Size=ef.Size:lerp(ef.Size+Vector3.new(0.05,0.05,0.05),0.25)
+                                ef.Transparency=ef.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef:Destroy()
+                        end)()
+                        local ef2 = Instance.new("Part",char)
+                        ef2.Name="effect"
+                        ef2.CanCollide=false
+                        ef2.Anchored=true
+                        ef2.CFrame=rarm.CFrame*CFrame.new(0,-1.05,0)*CFrame.Angles(r,r,r)
+                        ef2.Size=Vector3.new(1,1,1)
+                        ef2.BrickColor=BrickColor.new(color)
+                        ef2.Material="Neon"
+                        
+                        coroutine.wrap(function()
+                        for i = 1, 30 do
+                                ef2.Size=ef2.Size:lerp(ef2.Size+Vector3.new(0.05,0.05,0.05),0.25)
+                                ef2.Transparency=ef2.Transparency+1/30
+                                rs:wait()
+                        end
+                        ef2:Destroy()
+                        end)()
+                end
+        end
+end)()
+hum.MaxHealth=150000
+hum.Health=hum.MaxHealth
+-----animations-----
+mouse.KeyDown:connect(function(key)
+    if key=="0" then
+        char.Humanoid.WalkSpeed = run
+                hed.Velocity=hed.CFrame.lookVector*100
+    end
+end)
+mouse.KeyUp:connect(function(key)
+    if key=="0" then
+        char.Humanoid.WalkSpeed = normal
+    end
+end)
+game:GetService("RunService").RenderStepped:connect(function()
+char.Humanoid.FreeFalling:connect(function(f)
+if f then
+ffing = true
+else
+ffing = false
+end
+end)
+sine = sine + add
+if ffing==true then
+anim="jump"
+elseif (torso.Velocity*Vector3.new(1, 0, 1)).magnitude < 2 then
+anim="idle"
+elseif (torso.Velocity*Vector3.new(1, 0, 1)).magnitude < 20 then
+anim = "walk"
+elseif (torso.Velocity*Vector3.new(1, 0, 1)).magnitude > 20 then
+anim = "run"
+end
+
+if NoAnims==false then
+if anim=="idle" then
+add=0.5
+if trans == false then
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1,0)*CFrame.Angles(math.rad(0),0,0),0.05)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0.15),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,-0.15),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(0)+-math.sin(sine/14)/7,0,-6+-math.sin(sine/14)/7),0.1)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(90)+-math.sin(sine/14)/7,0,0),0.1)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(0),0,0),0.25)
+else
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,0+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(0),0,0),0.05)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0.15+math.sin(sine/14)/20),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,-0.15+-math.sin(sine/14)/20),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-10)+-math.sin(sine/14)/7,0,-6+-math.sin(sine/14)/7),0.1)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-10)+-math.sin(sine/14)/7,0,6+math.sin(sine/14)/7),0.1)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,-0.15)*CFrame.Angles(math.rad(-20),0,0),0.25)
+end
+
+elseif anim=="walk" then
+add=0.5
+if trans == false then
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1+math.sin(sine/3.5)/3,0)*CFrame.Angles(math.rad(-10),0,0),0.25)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1+math.sin(sine/7)/2,-0.15+-math.sin(sine/7)/2)*CFrame.Angles(math.rad(-20)+math.sin(sine/7)/2,0,0.05),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1+-math.sin(sine/7)/2,-0.15+math.sin(sine/7)/2)*CFrame.Angles(math.rad(-20)+-math.sin(sine/7)/2,0,-0.05),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5+-math.cos(sine/7)/7,0+math.sin(sine/14)/7)*CFrame.Angles(math.rad(0)+-math.sin(sine/14)/2,0,-6+-math.sin(sine/14)/7),0.1)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5+-math.cos(sine/10)/14,0)*CFrame.Angles(math.rad(90)+-math.sin(sine/14)/7,0,0),0.1)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(10),0,0),0.25)
+else
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,0+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-10),0,0),0.05)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(-10),0,0.15+math.sin(sine/14)/20),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(-10),0,-0.15+-math.sin(sine/14)/20),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-20)+-math.sin(sine/14)/7,0,-6+-math.sin(sine/14)/7),0.1)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.6+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-20)+-math.sin(sine/14)/7,0,6+math.sin(sine/14)/7),0.1)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,-0.15)*CFrame.Angles(math.rad(-20),0,0),0.25)
+end
+
+elseif anim=="run" then
+add=0.5
+if trans == false then
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,-1+math.sin(sine/2)/3,0)*CFrame.Angles(math.rad(-37),0,0),0.025)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1+math.sin(sine/4)/2,-0.15+-math.sin(sine/4)/2)*CFrame.Angles(math.rad(-20)+math.sin(sine/4)/2,0,0.05),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1+-math.sin(sine/4)/2,-0.15+math.sin(sine/4)/2)*CFrame.Angles(math.rad(-20)+-math.sin(sine/4)/2,0,-0.05),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5,0.1)*CFrame.Angles(math.rad(-20)+-math.sin(sine/17)/7,0,-6),0.25)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,0.1)*CFrame.Angles(math.rad(-20)+-math.sin(sine/17)/7,0,6),0.25)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0)*CFrame.Angles(math.rad(20),0,0),0.25)
+else
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0,1+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-70),0,0),0.25)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-1,0)*CFrame.Angles(math.rad(0),0,0.15),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0)*CFrame.Angles(math.rad(0),0,-0.15),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-20)+-math.sin(sine/14)/7,0,-6),0.25)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5+-math.cos(sine/14)/7,0)*CFrame.Angles(math.rad(-20)+-math.sin(sine/14)/7,0,6),0.25)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,0.3)*CFrame.Angles(math.rad(70),0,0),0.25)
+end
+
+elseif anim=="jump" then
+add=0.5
+torso.Weld.C0=torso.Weld.C0:lerp(CFrame.new(0+-math.cos(sine/14)/7,.5+-math.cos(sine/14)/7,0+-math.cos(sine/14)/7)*CFrame.Angles(math.rad(0),0,0),0.05)
+rleg.Weld.C0=rleg.Weld.C0:lerp(CFrame.new(.5,-0.7,-0.5)*CFrame.Angles(math.rad(10),0,0),0.25)
+lleg.Weld.C0=lleg.Weld.C0:lerp(CFrame.new(-.5,-1,0.1)*CFrame.Angles(math.rad(-10),0,0),0.25)
+rarm.Weld.C0=rarm.Weld.C0:lerp(CFrame.new(1.5,0.5,0)*CFrame.Angles(math.rad(50),0,90),0.25)
+larm.Weld.C0=larm.Weld.C0:lerp(CFrame.new(-1.5,0.5,0)*CFrame.Angles(math.rad(50),0,-90),0.25)
+hed.Weld.C0=hed.Weld.C0:lerp(CFrame.new(0,1.5,-0.1)*CFrame.Angles(math.rad(-20),0,0),0.25)
+
+end
+end
+                 
+end)
