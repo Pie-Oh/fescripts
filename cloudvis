@@ -1,0 +1,181 @@
+---[[ Cloud "Visualizer", Rushed out and made by Zuu_Roku, Credits to Cass for being a cool dood]]---
+
+print("Made by Zuu_Roku, Commands are !play !snow !rain !multiplier and !volume")
+
+print("Credits to Cass / PPATTA for being a cool dood")
+
+
+local Player = game.Players.LocalPlayer
+
+local Character = Player.Character
+
+local H = Character["Head"]
+
+local multiplier = 4
+
+local Cloud = Instance.new('Part',Character)
+
+Cloud.Size = Vector3.new(20,15,20)
+
+Cloud.Anchored = true
+
+Cloud.CanCollide = false
+
+Cloud.Transparency = 0
+
+
+
+local CloudMesh = Instance.new('SpecialMesh',Cloud)
+
+CloudMesh.Scale = Vector3.new(25,10,25)
+
+CloudMesh.MeshId = "http://www.roblox.com/asset/?id=1095708"
+
+CloudMesh.Offset = Vector3.new(0,10,0)
+
+
+local loudness = 0
+
+
+
+local S = Instance.new('Sound',Cloud)
+
+S.SoundId = "rbxassetid://911100428"
+
+S.Looped = true
+
+S.Volume = 8
+
+S.MaxDistance = 100
+
+S:Play()
+
+
+
+local Rain = Instance.new('ParticleEmitter',Cloud)
+
+Rain.Color = ColorSequence.new(Color3.new(1,1,1),Color3.fromRGB(175,255,255))
+
+Rain.Size = NumberSequence.new(.5)
+
+Rain.Texture = "http://www.roblox.com/asset/?id=241876428"
+
+Rain.Transparency = NumberSequence.new(0,.6)
+
+Rain.Acceleration = Vector3.new(0,-150,0)
+
+Rain.Lifetime = NumberRange.new(5,10)
+
+Rain.Rate = 100
+
+local rad = math.rad
+
+local sin = math.sin
+
+local tan = math.tan
+
+local cos = math.cos
+
+Player.Chatted:connect(function(m)
+
+	if m:match("!play%s%d+") then
+
+		S:Stop()
+
+		S.SoundId = "rbxassetid://"..m:match("!play%s(%d+)")
+
+		S:Play()
+
+	elseif m:match("!volume%s%d+") then
+
+		S.Volume = m:match("!volume%s(%d+)")
+
+	elseif m:match("!pitch%s%d+") then
+
+		S.Pitch = m:match("!volume%s(%d+)")
+
+	elseif m:match("!snow") then
+
+		Rain.Texture = "http://www.roblox.com/asset/?id=605668174"
+
+		Rain.Acceleration = Vector3.new(0,-10,0)
+
+		Rain.Lifetime = NumberRange.new(15,20)
+
+		Rain.Size = NumberSequence.new(.2)
+
+	elseif m:match("!rain") then
+
+		Rain.Texture = "http://www.roblox.com/asset/?id=241876428"
+
+		Rain.Acceleration = Vector3.new(0,-150,0)
+
+		Rain.Lifetime = NumberRange.new(5,10)
+
+		Rain.Size = NumberSequence.new(.5)
+
+	elseif m:match("!multiplier%s%d+") then
+
+		multiplier = m:match("!multiplier%s(%d+)")
+
+	elseif m:match("!rr") then
+
+		print(Rain.Rate)
+
+	end
+end)
+
+
+
+function Weld(x,y)
+
+	local w = Instance.new("Weld")
+
+	w.Part0 = x
+
+	w.Part1 = y
+
+	w.Name = tostring(y.Name).."_Weld"
+
+	w.Parent = x
+
+	return w
+
+end
+
+
+
+function Clerp(start,destination,increment)
+
+	local function slerp(a,b,c)return (1-c)*a+(c*b)end
+
+    local c1 = {start.X,start.Y,start.Z,start:toEulerAnglesXYZ()}
+
+    local c2 = {destination.X,destination.Y,destination.Z,destination:toEulerAnglesXYZ()}
+
+    for i,v in pairs(c1)do c1[i] = slerp(v,c2[i],increment)end
+
+    return CFrame.new(c1[1],c1[2],c1[3])*CFrame.Angles(c1[4],c1[5],c1[6])
+
+end
+
+
+
+while true do
+	
+	Rain.Rate = (S.PlaybackLoudness + 50) * multiplier
+
+	game:GetService('RunService').RenderStepped:wait()
+
+	local HP = H.CFrame.p
+
+	local sizer = S.PlaybackLoudness/50 + 15
+	
+	Cloud.Size = Vector3.new(sizer,15,sizer)
+
+	CloudMesh.Scale = Vector3.new(sizer,10,sizer)
+
+	Cloud.CFrame = Clerp(Cloud.CFrame, CFrame.new(HP + Vector3.new(0,4,0))*CFrame.Angles(0,rad(90),0), .1)
+
+	Cloud.BrickColor = BrickColor.new(Color3.fromRGB(255 - S.PlaybackLoudness*1.1, 255-S.PlaybackLoudness*1.1, 255-S.PlaybackLoudness*1.1))
+end
