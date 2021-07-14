@@ -1,0 +1,388 @@
+--By Rufus14 (funneh)
+workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,5,5)
+char = game.Players.LocalPlayer.Character
+ball = Instance.new("Part", char)
+ball.Size = Vector3.new(1,1,1)
+ball.Material = "Neon"
+ball.Shape = "Ball"
+haha = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+haha.SoundId = "rbxassetid://617500399"
+kaboom = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+kaboom.SoundId = "rbxassetid://138084923"
+vic = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+vic.SoundId = "rbxassetid://130834939"
+kick = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+kick.SoundId = "rbxassetid://621557962"
+kick.Volume = 7
+fart = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+fart.SoundId = "rbxassetid://154967038"
+fart.Volume = 7
+ex = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+ex.SoundId = "rbxassetid://514867425"
+ssjaah = Instance.new("Sound", game.Players.LocalPlayer.Character.Head)
+ssjaah.EmitterSize = 1
+ssjaah.SoundId = "rbxassetid://527276541"
+ssjaah.Looped = true
+ball.CanCollide = false
+ball:BreakJoints()
+mouse = game.Players.LocalPlayer:GetMouse()
+using = false
+colormath = math.random(1,8)
+if colormath == 1 then
+	ball.BrickColor = BrickColor.new("New Yeller")
+end
+if colormath == 2 then
+	ball.BrickColor = BrickColor.new("Cyan")
+end
+if colormath == 3 then
+	ball.BrickColor = BrickColor.new("Maroon")
+end
+if colormath == 4 then
+	ball.BrickColor = BrickColor.new("Burnt Sienna")
+end
+if colormath == 5 then
+	ball.BrickColor = BrickColor.new("Lime green")
+end
+if colormath == 6 then
+	ball.BrickColor = BrickColor.new("Deep orange")
+end
+if colormath == 7 then
+	ball.BrickColor = BrickColor.new("Hot pink")
+end
+if colormath == 8 then
+	ball.BrickColor = BrickColor.new("Institutional white")
+end
+local weld = Instance.new("Weld", ball)
+weld.Part0 = char["Right Arm"]
+weld.Part1 = ball
+weld.C0 = weld.C0 * CFrame.new(0,-1.2,0)
+function attack()
+	if not using then
+		using = true
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+		workspace.CurrentCamera.CameraType = "Scriptable"
+		workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,2,5)
+		for i = 1,2 do
+			wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.02)
+		end
+		for i = 1,12 do
+			wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.05,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,0.05)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.3)
+		end
+		for i = 1,2 do
+			wait()
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.02,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,0.02)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.02)
+		end
+		wait(2)
+		for i = 1,2 do
+			wait()
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.02,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,0.02)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.02)
+		end
+		for i = 1,7 do
+			wait()
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.1,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,-0.1)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.4)
+		end
+		ball.Transparency = 1
+		ball1 = Instance.new("Part", game.Players.LocalPlayer.Character)
+		ball1.Shape = ball.Shape
+		ball1.Size = ball.Size
+		ball1.Material = ball.Material
+		ball1.BrickColor = ball.BrickColor
+		ball1.CFrame = ball.CFrame
+		local velo = Instance.new("BodyVelocity", ball1)
+		velo.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		velo.Velocity = char.Torso.CFrame.lookVector * 120
+		canhit = false
+		local function begin(part)
+			local hum = part.Parent:findFirstChild("Humanoid")
+			local tor = part.Parent:findFirstChild("Torso")
+			if hum ~= nil and canhit then
+				if tor then
+					canhit = false
+					using = true
+					ball1:destroy()
+					tor.Anchored = true
+					wait(1.5)
+					workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,0,-5)
+					workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0,3.2,0)
+					workspace.CurrentCamera.CameraType = "Watch"
+					workspace.CurrentCamera.CameraSubject = char.Head
+					wait(0.5)
+					using = true
+					for i = 1,6 do
+					wait()
+					using = true
+					char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,0.15)
+					char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.new(0,0,-0.15)
+					char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.05,0,0)
+					char.Torso["Right Hip"].C0 = char.Torso["Right Hip"].C0 * CFrame.new(0.15,0.15,0)
+					char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.15)
+					char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0,0,-0.15)
+					end
+					wait(1.5)
+					for i = 1,6 do
+						using = true
+						char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,-0.15)
+						char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.new(0,0,0.15)
+						char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.05,0,0)
+						char.Torso["Right Hip"].C0 = char.Torso["Right Hip"].C0 * CFrame.new(-0.15,-0.15,0)
+						char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.15)
+						char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0,0,0.15)
+					end
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+					local torvel = Instance.new("BodyVelocity", char.Torso)
+					torvel.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+					torvel.Velocity = Vector3.new(0,120,0)
+					wait(1.5)
+					local crick = Instance.new("Sound", tor)
+					crick.EmitterSize = 1
+					crick.SoundId = "rbxassetid://358498184"
+					crick.Looped = true
+					crick:Play()
+					for i = 1,80 do
+						wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+						using = true
+						workspace.CurrentCamera.CameraType = "Fixed"
+						workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,0,-5)
+						workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0,0.01,0)
+					end
+					torvel.Velocity = Vector3.new(0,-60,0)
+					ssjaah:Play()
+					workspace.CurrentCamera.CameraType = "Custom"
+					workspace.CurrentCamera.CameraSubject = tor
+					workspace.CurrentCamera.CFrame = tor.CFrame * CFrame.new(0,0,5)
+					wait(2)
+					workspace.CurrentCamera.CameraType = "Fixed"
+					workspace.CurrentCamera.CameraSubject = char
+					workspace.CurrentCamera.CFrame = char.Torso.CFrame
+					workspace.CurrentCamera.CFrame = char.Torso.CFrame * CFrame.new(0,5,0)
+					for i = 1,45 do
+						wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+						using = true
+						workspace.CurrentCamera.CameraType = "Fixed"
+						workspace.CurrentCamera.CameraSubject = char
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame * CFrame.new(0,5,0)
+						char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.1,0,0)
+						char.Humanoid.CameraOffset = Vector3.new(math.random(-1,1),math.random(-1,1),math.random(-1,1))
+					end
+					workspace.CurrentCamera.CameraType = "Custom"
+					workspace.CurrentCamera.CameraSubject = tor
+					workspace.CurrentCamera.CFrame = tor.CFrame * CFrame.new(0,0,5)
+					wait(1)
+					workspace.CurrentCamera.CameraType = "Custom"
+					workspace.CurrentCamera.CameraSubject = char
+					for i = 1,25 do
+						wait()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+
+						workspace.CurrentCamera.CameraType = "Fixed"
+						workspace.CurrentCamera.CameraSubject = char
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame * CFrame.new(0,5,0)
+						char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.15,0,0)
+						char.Humanoid.CameraOffset = Vector3.new(math.random(-1.5,1.5),math.random(-1.5,1.5),math.random(-1.5,1.5))
+					end
+					workspace.CurrentCamera.CameraType = "Watch"
+					workspace.CurrentCamera.CameraSubject = tor
+					wait(0.5)
+					for i = 1,27 do
+						wait()
+						workspace.CurrentCamera.CameraType = "Fixed"
+						workspace.CurrentCamera.CameraSubject = char
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame
+						workspace.CurrentCamera.CFrame = char.HumanoidRootPart.CFrame * CFrame.new(0,5,0)
+						char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.4,0,0)
+						char.Humanoid.CameraOffset = Vector3.new(math.random(-2,2),math.random(-2,2),math.random(-2,2))
+					end
+					torvel:destroy()
+					workspace.CurrentCamera.CameraType = "Watch"
+					workspace.CurrentCamera.CameraSubject = char
+					local touh = false
+					local function bam()
+						if not touh then
+							touh = true
+							ssjaah:Stop()
+							crick:Stop()
+							ex:Play()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+							workspace.CurrentCamera.CameraType = "Scriptable"
+							workspace.CurrentCamera.CameraSubject = char.Head
+							workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,0,-5)
+							workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0,3.2,0)
+							local EXPLorange = Instance.new("Part", game.Players.LocalPlayer.Character)
+       						EXPLorange.Size = Vector3.new(2,2,2)
+      						EXPLorange.CanCollide = false
+      						EXPLorange.BrickColor = BrickColor.new("Deep orange")
+      						EXPLorange.Anchored = true
+     					    EXPLorange.Shape = "Ball"
+      						EXPLorange.CFrame = char.Head.CFrame * CFrame.new(0,-1.5,0)
+        					local posor = EXPLorange.CFrame
+							kaboom.TimePosition = 0.5
+							kaboom:Play()
+							--hum.Health = 0
+							for i = 1,100 do
+								wait()
+								workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.new(0,0,1)
+								EXPLorange.Size = EXPLorange.Size + Vector3.new(2,2,2)
+								EXPLorange.CFrame = posor
+								EXPLorange.Transparency = EXPLorange.Transparency + 0.01
+							end
+							EXPLorange:destroy()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+							game.Players.LocalPlayer.Character.Torso.Neck.C0 = CFrame.new(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+							game.Players.LocalPlayer.Character.Torso["Left Hip"].C0 = CFrame.new(-1, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+							game.Players.LocalPlayer.Character.Torso["Left Shoulder"].C0 = CFrame.new(-1, 0.5, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+							game.Players.LocalPlayer.Character.Torso["Right Hip"].C0 = CFrame.new(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+							game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+							game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+							workspace.CurrentCamera.CameraType = "Scriptable"
+							game.Workspace.CurrentCamera.FieldOfView = 70
+							game.Players.LocalPlayer.Character.Torso["Left Shoulder"].C0 = CFrame.new(-1,0.5,0) * CFrame.fromEulerAnglesXYZ(0,4.7,0)
+							game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+							game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+							char.Humanoid.CameraOffset = Vector3.new(0,0,0)
+							workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(3,-1,3)
+							workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0,0.3,0)
+							using = false
+							for i = 1,6 do
+								wait()
+								using = true
+								char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,0.15)
+								char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.new(0,0,-0.15)
+								char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.05,0,0)
+								char.Torso["Right Hip"].C0 = char.Torso["Right Hip"].C0 * CFrame.new(0.15,0.15,0)
+								char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.15)
+								char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0,0,-0.15)
+							end
+							wait(2)
+							for i = 1,6 do
+							using = true
+							char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,-0.15)
+							char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.new(0,0,0.15)
+							char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.05,0,0)
+							char.Torso["Right Hip"].C0 = char.Torso["Right Hip"].C0 * CFrame.new(-0.15,-0.15,0)
+							char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.15)
+							char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0,0,0.15)
+							end
+							local rotation = true
+							local rcktprplsn = Instance.new("RocketPropulsion", char.Torso)
+							rcktprplsn.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+							rcktprplsn.Target = tor
+							rcktprplsn.MaxSpeed = 130
+							rcktprplsn:fire()
+							haha:Play()
+							local function bang()
+								rcktprplsn:Abort()
+								rotation = false
+								fart:Play()
+								haha:Stop()
+								kick:Play()
+								game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+								local kidscream = Instance.new("Sound", tor)
+								kidscream.SoundId = "rbxassetid://535528169"
+								kidscream.EmitterSize = 2
+								kidscream:Play()
+								tor.Anchored = false
+								workspace.CurrentCamera.CameraSubject = char.Head
+								workspace.CurrentCamera.CameraType = "Custom"
+								local bom = Instance.new("BodyVelocity", tor)
+								bom.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 130
+								bom.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+								workspace.CurrentCamera.CameraSubject = tor
+								workspace.CurrentCamera.CameraType = "Watch"
+								wait(1.3)
+								kidscream:Stop()
+							
+								wait(2)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+								vic:Play()
+								workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,0,-5)
+								workspace.CurrentCamera.CFrame = workspace.CurrentCamera.CFrame * CFrame.Angles(0,3.2,0)
+								workspace.CurrentCamera.CameraType = "Watch"
+								workspace.CurrentCamera.CameraSubject = char.Head
+								for i = 1,5 do
+									char.Humanoid.Jump = true
+									wait(1)
+								end
+								game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+								workspace.CurrentCamera.CameraType = "Custom"
+								game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+								game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+								using = false
+							end
+							rcktprplsn.ReachedTarget:connect(bang)
+							workspace.CurrentCamera.CameraType = "Track"
+							workspace.CurrentCamera.CameraSubject = char
+							while rotation do
+								wait()
+								char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(1,0,0)
+							end
+						end
+					end
+					char["Left Leg"].Touched:connect(bam)
+					char["Right Leg"].Touched:connect(bam)
+					char.Head.Touched:connect(bam)
+				end
+			end
+		end
+		ball1.Touched:connect(begin)
+		for i = 1,3 do
+			wait()
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.1,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,-0.1)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.4)
+		end
+		canhit = true
+		for i = 1,2 do
+			wait()
+			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(0.1,0,0)
+			char.Torso["Left Hip"].C0 = char.Torso["Left Hip"].C0 * CFrame.Angles(0,0,-0.1)
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.4)
+		end
+		for i = 1,2 do
+			wait()
+			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,-0.05)
+		end
+		wait(1)
+		ball.Transparency = 0
+		game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint.C0 = CFrame.new(0, 0, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+		game.Players.LocalPlayer.Character.Torso.Neck.C0 = CFrame.new(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+		game.Players.LocalPlayer.Character.Torso["Left Hip"].C0 = CFrame.new(-1, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+		game.Players.LocalPlayer.Character.Torso["Left Shoulder"].C0 = CFrame.new(-1, 0.5, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+		game.Players.LocalPlayer.Character.Torso["Right Hip"].C0 = CFrame.new(1, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+		game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		game.Workspace.CurrentCamera.FieldOfView = 70
+		game.Players.LocalPlayer.Character.Torso["Left Shoulder"].C0 = CFrame.new(-1,0.5,0) * CFrame.fromEulerAnglesXYZ(0,4.7,0)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		workspace.CurrentCamera.CameraType = "Custom"
+		using = false
+	end
+end
+mouse.Button1Down:connect(attack)
