@@ -59,20 +59,20 @@ weld.C0 = weld.C0 * CFrame.new(0,-1.2,0)
 function attack()
 	if not using then
 		using = true
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 		workspace.CurrentCamera.CameraType = "Scriptable"
 		workspace.CurrentCamera.CFrame = game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(0,2,5)
 		for i = 1,2 do
 			wait()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 			char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.02)
 		end
 		for i = 1,12 do
 			wait()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 			char.HumanoidRootPart.RootJoint.C0 = char.HumanoidRootPart.RootJoint.C0 * CFrame.Angles(-0.05,0,0)
@@ -145,7 +145,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
 						char.Torso["Right Shoulder"].C0 = char.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.15)
 						char.Torso["Left Shoulder"].C0 = char.Torso["Left Shoulder"].C0 * CFrame.Angles(0,0,0.15)
 					end
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 					local torvel = Instance.new("BodyVelocity", char.Torso)
@@ -159,7 +159,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
 					crick:Play()
 					for i = 1,80 do
 						wait()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 						using = true
@@ -179,7 +179,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
 					workspace.CurrentCamera.CFrame = char.Torso.CFrame * CFrame.new(0,5,0)
 					for i = 1,45 do
 						wait()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 						using = true
@@ -198,7 +198,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
 					workspace.CurrentCamera.CameraSubject = char
 					for i = 1,25 do
 						wait()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
 
 						workspace.CurrentCamera.CameraType = "Fixed"
