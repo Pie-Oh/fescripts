@@ -1148,3 +1148,9 @@ if CmdBox.Text == "weirdreanim" then
 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Pie-Oh/Kenta-Reanim/main/weirdreanim"))()
 end
 end)
+
+Execute.MouseButton1Click:Connect(function()
+if CmdBox.Text == "weirdreanim" then
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Pie-Oh/fescripts/main/bat"))()
+end
+end)
