@@ -1150,7 +1150,7 @@ end
 end)
 
 Execute.MouseButton1Click:Connect(function()
-if CmdBox.Text == "weirdreanim" then
+if CmdBox.Text == "weirdrean" then
 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Pie-Oh/fescripts/main/bat"))()
 end
 end)
